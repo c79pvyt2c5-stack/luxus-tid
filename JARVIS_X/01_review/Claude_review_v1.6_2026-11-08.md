@@ -15,7 +15,7 @@ Alle 20 roller, dansk stemme, iPhone, cloud-eskalering, 3D-kontor og Market Inte
 
 **Stopklodser (skal afgøres før byggeordre):**
 
-1. **8-bit og RAM [E]:** Vægtene fylder alene ca. 30 GB (Ollamas angivelse i dit dokument; jeg kunne ikke selv nå ollama.com fra min session). Med macOS, stemme, HUD, apps og KV-cache når AI Power Mode op på **ca. 50–53 GB**. Det er over 48 GB og langt over den tidligere grænse på ≤ 41 GB planlagt.
+1. **8-bit og RAM [E]:** Vægtene fylder alene ca. 30 GB (Ollamas angivelse i dit dokument; jeg kunne ikke selv nå ollama.com fra min session). Med macOS, stemme, HUD, apps og KV-cache når AI Power Mode op på **ca. 50–59 GB** (se punkt 5). Det er over 48 GB og langt over den tidligere grænse på ≤ 41 GB planlagt.
 2. **8-bit og hastighed [E]:** En tæt (dense) 27B-model i 8-bit er begrænset af hukommelsesbåndbredden. Med ca. 550 GB/s (M4 Max-niveau; M5 Max skal verificeres) er loftet ca. 18–20 tokens/s, og i praksis bliver det ca. 13–17. Den tidligere tærskel på ≥ 40 tok/s (T-L3) **kan ikke opfyldes af nogen tæt 27B-model**, heller ikke i 4-bit. Til tale er 13–17 tok/s nok, for TTS bruger ca. 5–6 tok/s. Men tiden til første token ved lange prompts kan bryde stemmekravet på p50 ≤ 1,5 s. Det kræver prefix-caching og et hurtigt første svar fra den lille model [H].
 3. **GPU-hukommelsesgrænse [E]:** macOS giver som standard kun GPU'en en del af de 48 GB (ofte omkring 70–75 %, dvs. ca. 34–36 GB). 30 GB vægte plus KV-cache plus ASR/TTS ligger på kanten. Det skal måles på den købte maskine, og grænsen må ikke hæves uden din godkendelse.
 4. **Cloud-eskalering kræver en API-nøgle og et budget, som ikke findes endnu.** Intet må aktiveres, før du har godkendt nøgle, budgetloft og dataklasser.
